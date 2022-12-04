@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+*
+body {
+    background-color: silver;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.text 
+{
+    font-size: 20px;
+}
+.button
+{
+    font-size: 20px;
+    cursor: pointer;
+}
