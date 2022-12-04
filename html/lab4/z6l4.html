@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1"/>
+  <link rel="stylesheet">
+  <title>Task 4</title></head>
+<body>
+<form>
+	<label> Twoje imię i nazwisko: </label><br>
+	<input id="imie" type="text"></input>
+	<input id="nazwisko" type="text"><br>
+
+	<label> Twój wiek: </label><br>
+	<input id="wiek" type="number" style="width:30px; height:15px;"><br>
+
+    <p>podaj adres:</p>
+    <input id='email'>
+    <button type='submit' id='validate'>sprawdz</button>
+  </form>
+  <div id='result'></div>
+  <script>
+    function validateEmail(email) {
+      let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return res.test(email);
+    }
+    function validate() {
+      let result = $("#result");
+      let email = $("#email").val();
+      result.text("");
+      if(validateEmail(email)) {
+        result.text(email + " is valid");
+        result.css("color", "blue");
+      } else {
+        result.text(email + " is not valid");
+        result.css("color", "red");
+      }
+      return false;
+    }
+    $("#validate").on("click", validate);
+  </script>
+	<label> Twoja płeć: </label><br>
+
+    <input type="radio" name="plec">
+    <label>Mężczyzna</label><br>
+    <input type="radio" name="plec">
+    <label>Kobieta</label><br>
+    <input type="radio" name="plec">
+    <label>Inne</label><br>
+
+	<label> Data rozpoczęcia Twoich studiów: </label><br>
+	<input type="date"><br>
+
+	<label>Wydział na który uczęszczasz:</label><br>
+	<input list="listawydzialow">
+  	<datalist id="listawydzialow">
+    	<option value="Wydział Biotechnologii">
+    	<option value="Wydział Chemii">
+    	<option value="Wydział Filologiczny">
+    	<option value="Wydział Fizyki i Astronomii">
+    	<option value="Wydział Matematyki i Informatyki">
+	    <option value="Wydział Nauk Biologicznych">
+	    <option value="Wydział Nauk Historycznych i Pedagogicznych">
+	    <option value="Wydział Nauk o Ziemi i Kształtowania Środowiska">
+	    <option value="Wydział Nauk Społecznych">
+	    <option value="Wydział Prawa Administracji i Ekonomii">
+	    <option value="Kolegium Międzydziedzinowych Studiów Indywidualnych">
+	    <option value="Międzywydziałowe Studdium Ochrony Środowiska">
+  	</datalist><br>
+
+    <input id="dodaj" type="submit" value="Prześlij">
+    <input type="reset" value="Reset">
+	
+
+
+	</form>
+</body>
+<script>
+    const dodaj=document.getElementById("dodaj");
+    var obiekty=[];
+    dodaj.addEventListener("click",stop, false);
+    function stop(event){
+        event.preventDefault();
+        var obiekt={
+            imie: document.getElementById("imie").value,
+            nazwisko: document.getElementById("nazwisko").value,
+            wiek: document.getElementById("wiek").value,
+            email: document.getElementById("email").value,
+            listawydzialow: document.getElementById("listawydzialow").value
+        };
+        obiekty.push(obiekt);
+        document.forms[0].reset();
+        console.warn({obiekty})
+    }
+</script>
+</html>
