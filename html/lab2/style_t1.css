@@ -1,0 +1,7 @@
+div.flex-container {
+    display:        flex;
+    flex-direction: column; /*zmienione z row na column*/
+    justify-content:    end;/* zmienione z center na end*/
+    background-color: gray;
+    
+}

@@ -1,0 +1,6 @@
+div.flex-container {
+    display:        flex;
+    flex-direction: row;
+    overflow-x: auto;
+    background-color: gray;
+}

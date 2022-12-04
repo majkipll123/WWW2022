@@ -1,0 +1,41 @@
+<!--zadanie 3-->
+<!DOCTYPE htlm> 
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <title>Task 1</title>
+    <style>
+        .card{
+            border-style:dotted;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        h1 {
+            
+            color: blue
+        }
+        h2{
+            color: red
+        }
+    </style> <!-- przyczyna braku zmian moze byc pozniejsze wykozystanie style color w naglowku <h1>-->
+</head>
+<body style="background-color:grey">
+    
+    <div style="border-style: solid; padding: 10px ;border-radius: 10px">
+        <div class="card" style="border-style: dashed; padding: 10px; border radius: 10px"><h1>Naglowek 1</h1></div>
+        <div class="card" style="border-style: dashed; padding: 10px; border radius: 10px"><p margin=10px>Akapit 1</p></div>
+        <div class="card" ></div><!--natomiast dodanie pustego div pomiedzy inne tez nie zmienia nic w wygladzie strony natomiatst po dodaniu atrybutu class=card w stronie pojawia sie dodatkowy wiersz -->
+        <div class="card" style="border-style: dashed; padding: 10px; border radius: 10px"><h2>Naglowek 2</h2></div>
+        <div class="card" style="border-style: dashed; padding: 10px; border radius: 10px"><p>Akapit 2</p></div>
+    </div><!-- wprowadzenie nowego pustego div nie zmienilo nic natomiast dodanie do niego class card powoduje ze pod tabela pojawia sie jeszcze jeden wiersz.-->
+    <div class="card">
+
+
+
+
+    </div>
+</body>
+<footer>
+    Stopka
+</footer>
+</html>

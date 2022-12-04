@@ -1,0 +1,24 @@
+div.flex-container:nth-child(even){
+    font-family:      Roboto;
+    display:            flex;
+    height:            200px;
+    justify-content:  center;
+    align-items:    baseline;
+    background-color:  red; 
+    
+    text-decoration: underline; 
+    font-size: 20px;
+    
+}
+div.flex-container:nth-child(odd){
+    font-family:      Roboto;
+    font-weight:        bold;
+    display:            flex;
+    height:            200px;
+    justify-content:  center;
+    align-items:    baseline;
+    background-color: gray;
+    font-size: 20px;
+    
+    
+}

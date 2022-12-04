@@ -1,0 +1,28 @@
+architektura client server stron internetowych 
+klient zwany (frontend) to warstwa prezentacyjna aplikacji 
+serwer czyli backend to warstwa dostepu do danych aplikacji 
+front end czyli strona ktora np robilismy na laboratoriach 
+backend to jest to co dzieje sie pomiedzy serwerem a nami 
+przykladowe pojecia backendu 
+przyklady jezykow ktorymi mozna programowac w backendzie  
+sql(jezyk baz danych i ma bardzo duzo dystrybucji kazdy pod inna firme) javascript(pozwala tu i tu) php
+skalowalnosc to wlasciwosc ktora pozwala na zwiekszenie zapotrzebowania serwerow kiedy wiecej ludzi korzysta z platformy 
+logika biznesowa rezerwowanie miejsc na prakingu, nie pakowac logiki biznesowej z przodu strony tylko na serwer zeby uzytkownicy wysylai tylko przez frontend a nie przez backend ??
+przykladowe pojecia frontend 
+jezyki html css javascript
+kompatybilnosc miedzyplatformowa- juz nie tak wazne pojecie jak kiedys poniewaz na wiekszosci przegladarek jest zestandaryzowane kozystanie z java scripta kiedys specialnie robilo sie strony pod dane przegldarki natomiast teraz tylko safari ma jakis problem 
+interfejs uzytkownika  to co widzimy, przyciski, interaktywne lub nie, bardzo wazna rzecz zarowno jak i jego uzytecznosc, najlepiej zeby przypominalo cos do czego ludzie sa juz przyzwyczajeni 
+responsywnosc strony internetowej 
+strona potrafi ulozyc sie pod telefon i rozmiar ekranu a inaczej na laptopie lub ekranie monitora
+asynchronicznosc rzadan (ajax)
+robienie rzadan w tle ktore nie przerywaja procesow, przegladara nie czeka az kazde po kolei sie zrobia, np kiedy klikamy przycisk to nie freezuje sie cala strona tylko mozemy pracowac dalej 
+single page aplication and multi page aplication
+strona internetowa rfc-editor klasyczny przyklad multi page aplication 
+przyklad strony single page airbnb
+filary nowoczesnej aplikacji 
+html opisuje strukture strony 
+css opisuje wyglad 
+javascript opisuje funkcje i zwieksza interaktywnosc 
+ 
+
+

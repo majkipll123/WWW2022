@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <head>
+            <title>Space Clicker</title>
+            <link rel="stylesheet"
+        href="style6.css">
+        </head>
+        
+        <body>
+            <script type="text/javascript">
+
+        let button = document.getElementsByTagName('button')[0];
+
+function RBC (e) {
+  button.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+}
+
+button.addEventListener("click", RBC);
+window.onload = RBC();
+            </script>
+           <button class="button">click</button>
+        </body></html>
+</html>

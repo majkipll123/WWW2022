@@ -1,0 +1,7 @@
+div.flex-container {
+    display:            flex;
+    height:            200px;
+    justify-content:  center;
+    align-items:    baseline;
+    background-color: gray;
+}

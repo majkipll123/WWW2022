@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1"/>
+  <link rel="stylesheet"
+        href="style6.css">
+  <title>Task 2</title></head>
+<body>
+  <script type="text/javascript">
+     var clicks = 0;
+     function onClicka() 
+        {
+           clicks += 1;
+           document.getElementById("clicks").innerHTML = clicks;
+        };
+        function onClickb() 
+        {
+           clicks -= 1;
+           document.getElementById("clicks").innerHTML = clicks;
+        };
+  </script>
+<div>
+  <button type="button" onClick="onClicka()" id="counterBtnAdd">+</button>
+  <p>klikniecia: <a id="clicks">0</a></p>
+  <button type="button" onClick="onClickb()" id="counterBtnSub">-</button>
+  <span id="counter"></span>
+</div>
+<div>
+  <button type="button" id="colorBtn">Wygeneruj kolor</button>
+  <span id="color"></span>
+</div>
+</body>
+</html>

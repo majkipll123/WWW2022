@@ -1,0 +1,26 @@
+td:hover
+{
+    color: black;
+    background-color: blue;
+    border-color: black;
+}
+
+td:hover:nth-child(even)
+{
+    color: black;
+            background-color: blue;
+            border-color: red;
+}
+td:hover:nth-child(odd)
+{
+    color: black;
+    background-color: red;
+    border-color: blue;
+    
+}
+.styl1
+{
+    border-style:dotted;
+    padding: 10px;
+    border-radius: 10px;
+}

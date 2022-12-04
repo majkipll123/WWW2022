@@ -1,0 +1,41 @@
+div.flex-container:nth-child(even){
+    font-family:      Roboto;
+    display:            flex;
+    height:            200px;
+    justify-content:  center;
+    align-items:    baseline;
+    background-color:  red; 
+    
+    text-decoration: underline; 
+    
+    
+}
+div.flex-container:nth-child(odd){
+    font-family:      Roboto;
+    font-weight:        bold;
+    display:            flex;
+    height:            200px;
+    justify-content:  center;
+    align-items:    baseline;
+    background-color: gray;
+    
+    
+    
+}
+@media (max-width: 600px)
+{ 
+    .flex-container {
+        scroll-behavior:  smooth;
+        display:            flex;
+        background-color: gray;
+        flex-direction:   column;
+        font-size:           8px;
+    }
+}
+@media (min-width: 1140px)
+{
+    .flex-container {
+        background-color: #A0EBCF;
+        flex-direction:   column;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head type="text/css">
+
+    </head>
+<body>
+
+<h1>Strona do dzielenia 2 liczb</h1>
+
+<form>
+    1 liczba : <input type="text" 
+    id="1liczba" /><br>
+    2 liczba: <input type="text" 
+    id="2liczba" /><br>
+    <input type="button" onClick="podziel()" 
+    Value="podziel" /><br>
+  </form>
+
+  <script>
+    function podziel()
+    {
+      licz1 = document.getElementById(
+        "1liczba").value;
+      licz2 = document.getElementById(
+        "2liczba").value;
+      document.getElementById(
+        "wynik").innerHTML = licz1 / licz2;
+    }
+  </script>
+
+<p>Nacisnij podziel zeby podzielic.</p>
+<p>Twoj wynik to<br>
+    <span id = "wynik"></span>
+   </p>
+
+</body>
+</html>
