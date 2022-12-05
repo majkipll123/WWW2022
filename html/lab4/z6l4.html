@@ -1,96 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1"/>
-  <link rel="stylesheet">
-  <title>Task 4</title></head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie4,5,6</title>
+</head>
+<style>
+  table, th, td {
+    border:1px solid black;
+  }
+  </style>
 <body>
-<form>
-	<label> Twoje imię i nazwisko: </label><br>
-	<input id="imie" type="text"></input>
-	<input id="nazwisko" type="text"><br>
-
-	<label> Twój wiek: </label><br>
-	<input id="wiek" type="number" style="width:30px; height:15px;"><br>
-
-  <p>podaj adres:</p>
-  <input id='email'>
-  <button type='submit' id='validate'>sprawdz</button>
-</form>
-<div id='result'></div>
-<script>
-  function validateEmail(email) {
-    let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return res.test(email);
-  }
-  function validate() {
-    let result = $("#result");
-    let email = $("#email").val();
-    result.text("");
-    if(validateEmail(email)) {
-      result.text(email + " is valid");
-      result.css("color", "blue");
-    } else {
-      result.text(email + " is not valid");
-      result.css("color", "red");
+  <form>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js">
+    </script>
+    <label> Twoje imię i nazwisko: </label><br>
+    <input id="imie" type="text"></input>
+    <input id="nazwisko" type="text"><br>
+  
+    <label> Twój wiek: </label><br>
+    <input id="wiek" type="number" style="width:30px; height:15px;"><br>
+  
+    <p>podaj adres:</p>
+    <input id='email'>
+    <button type='submit' id='validate'>sprawdz</button>
+  </form>
+  <div id='result'></div>
+  <script>
+    function validateEmail(email) {
+      let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return res.test(email);
     }
-    return false;
-  }
-  $("#validate").on("click", validate);
-</script>
-	<label> Twoja płeć: </label><br>
+    function validate() {
+      let result = $("#result");
+      let email = $("#email").val();
+      result.text("");
+      if(validateEmail(email)) {
+        result.text(email + " is valid");
+        result.css("color", "blue");
+      } else {
+        result.text(email + " is not valid");
+        result.css("color", "red");
+      }
+      return false;
+    }
+    $("#validate").on("click", validate);
+  </script>
+    <label> Twoja płeć: </label><br>
+  
+      <input type="radio" name="plec">
+      <label>Mężczyzna</label><br>
+      <input type="radio" name="plec">
+      <label>Kobieta</label><br>
+      <input type="radio" name="plec">
+      <label>Inne</label><br>
+  
+    <label> Data rozpoczęcia Twoich studiów: </label><br>
+    <input type="date"><br>
+  
+    <label>Wydział na który uczęszczasz:</label><br>
+    <input list="listawydzialow" name="wydzial" list="wydzialy">
+      <datalist id="listawydzialow">
+        <option value="Wydział Biotechnologii">
+        <option value="Wydział Chemii">
+        <option value="Wydział Filologiczny">
+        <option value="Wydział Fizyki i Astronomii">
+        <option value="Wydział Matematyki i Informatyki">
+        <option value="Wydział Nauk Biologicznych">
+        <option value="Wydział Nauk Historycznych i Pedagogicznych">
+        <option value="Wydział Nauk o Ziemi i Kształtowania Środowiska">
+        <option value="Wydział Nauk Społecznych">
+        <option value="Wydział Prawa Administracji i Ekonomii">
+        <option value="Kolegium Międzydziedzinowych Studiów Indywidualnych">
+        <option value="Międzywydziałowe Studdium Ochrony Środowiska">
+      </datalist><br>
+  
+      <input id="dodaj" type="submit" value="Prześlij">
+      <input type="reset" value="Reset">
+    
+  
+  
+    </form>
 
-    <input type="radio" name="plec">
-    <label>Mężczyzna</label><br>
-    <input type="radio" name="plec">
-    <label>Kobieta</label><br>
-    <input type="radio" name="plec">
-    <label>Inne</label><br>
-
-	<label> Data rozpoczęcia Twoich studiów: </label><br>
-	<input type="date"><br>
-
-	<label>Wydział na który uczęszczasz:</label><br>
-	<input list="listawydzialow">
-  	<datalist id="listawydzialow">
-    	<option value="Wydział Biotechnologii">
-    	<option value="Wydział Chemii">
-    	<option value="Wydział Filologiczny">
-    	<option value="Wydział Fizyki i Astronomii">
-    	<option value="Wydział Matematyki i Informatyki">
-	    <option value="Wydział Nauk Biologicznych">
-	    <option value="Wydział Nauk Historycznych i Pedagogicznych">
-	    <option value="Wydział Nauk o Ziemi i Kształtowania Środowiska">
-	    <option value="Wydział Nauk Społecznych">
-	    <option value="Wydział Prawa Administracji i Ekonomii">
-	    <option value="Kolegium Międzydziedzinowych Studiów Indywidualnych">
-	    <option value="Międzywydziałowe Studdium Ochrony Środowiska">
-  	</datalist><br>
-
-    <input id="dodaj" type="submit" value="Prześlij">
-    <input type="reset" value="Reset">
-	
-
-
-	</form>
+    <table id="table">
+      <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Wiek</th>
+        <th>Mail</th>
+        <th>Płeć</th>
+        <th>Data rozpoczęcia studiów</th>
+        <th>Wydział</th>
+        <th>Usuń</th>
+      </tr>
+    </table>
 </body>
 <script>
-    const dodaj=document.getElementById("dodaj");
-    var obiekty=[];
-    dodaj.addEventListener("click",stop, false);
-    function stop(event){
-        event.preventDefault();
-        var obiekt={
-            imie: document.getElementById("imie").value,
-            nazwisko: document.getElementById("nazwisko").value,
-            wiek: document.getElementById("wiek").value,
-            email: document.getElementById("email").value,
-            listawydzialow: document.getElementById("listawydzialow").value
-        };
-        obiekty.push(obiekt);
-        document.forms[0].reset();
-        console.warn({obiekty})
+  const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const email = document.getElementById("email")
+  const form = document.getElementById("form")
+  let id = 0
+  
+  form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    let imie = document.getElementById("imie").value
+    let nazwisko = document.getElementById("nazwisko").value
+    let wiek = document.getElementById("wiek").value
+    let mail = document.getElementById("mail").value
+    let plec = document.querySelector('input[name="plec"]:checked').value;
+    let data = document.getElementById("data").value
+    let wydzial = document.getElementById("wydzial").value
+
+    form.reset()
+    
+    id += 1
+
+    document.getElementById('table').innerHTML += `<tr id=${id}><td>${imie}</td><td>${nazwisko}</td><td>${wiek}</td><td>${mail}</td><td>${plec}</td><td>${data}</td><td>${wydzial}</td><td><button onclick='usunKom(${id})'>Usuń</button</td></tr>`;
+    
+    
+
+    if (email.value.match(validRegex)) {
+      email.style.borderColor = "black"
+
+    }else{
+      email.style.borderColor = "red"
     }
+  })
+
+  const usunKom = (id) =>{
+    let komId = document.getElementById(id);
+    komId.remove()
+  }
 </script>
 </html>
