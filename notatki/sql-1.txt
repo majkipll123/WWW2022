@@ -1,0 +1,40 @@
+3)
+SELECT * FROM products;
+SELECT officeCode, city, country FROM offices;
+4)
+SELECT * FROM customers WHERE country = 'USA';
+SELECT orderNumber, orderDate, comments FROM orders WHERE orderDate BETWEEN '2003-01-01' AND '2004-01-01';
+SELECT * FROM products WHERE productVendor LIKE 'S%';
+5)
+SELECT * FROM orders INNER JOIN orderdetails ON orders.orderNumber=orderdetails.orderNumber;
+SELECT * FROM orders JOIN orderdetails ON orders.orderNumber=orderdetails.orderNumber JOIN products ON orderdetails.productCode=products.productCode WHERE orderdetails.quantityOrdered > 40 AND year(OrderDate) = '2004'; 
+6)
+SELECT * FROM orders JOIN orderdetails ON orders.orderNumber=orderdetails.orderNumber JOIN products ON orderdetails.productCode=products.productCode WHERE orderdetails.quantityOrdered > 40 AND year(OrderDate) = '2004' ORDER BY products.productName DESC;
+7)
+
+CREATE TABLE student
+(
+id INT AUTO_INCREMENT PRIMARY KEY,
+imie VARCHAR(50),
+nazwisko VARCHAR(50),
+wiek SMALLINT,
+wydziałid SMALLINT
+);
+
+CREATE TABLE wydzial
+(
+id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+nazwa VARCHAR(255),
+rokZalozenia SMALLINT
+);
+
+ALTER TABLE student ADD FOREIGN KEY (wydziałid) REFERENCES wydzial (id);
+
+8)
+SET FOREIGN_KEY_CHECKS=0;
+INSERT INTO student (id, imie, nazwisko, wiek, wydziałid) VALUES ('1','Karol','Makarowski','19','12');
+UPDATE student SET imie='GIGA', Nazwisko='CHAD' WHERE id=1;
+ALTER TABLE wydzial ADD czyJestAutomatNaKawe VARCHAR(50);
+SELECT * FROM student INNER JOIN wydzial ON student.wydziałid=wydzial.id;
+SET FOREIGN_KEY_CHECKS=1
+
